@@ -1,11 +1,11 @@
 {
     "appid": "90a76493-0c71-4cb0-b5de-f66afe1c8cd7",
     "name": "Cloaken",
-    "description": "Url Unshortener",
+    "description": "This app implements investigative actions to support Url Unshortener",
     "type": "information",
     "product_vendor": "Cypherint",
-    "logo": "cloaken.png",
-    "logo_dark": "Cloaken_White_Transparent_Phantom.png",
+    "logo": "logo_cloaken.svg",
+    "logo_dark": "logo_cloaken_dark.svg",
     "product_name": "Cloaken",
     "product_version_regex": ".*",
     "publisher": "Cypherint",
@@ -13,28 +13,24 @@
     "app_version": "1.0.0",
     "utctime_updated": "2019-05-26T23:01:31.064238Z",
     "package_name": "phantom_cloaken",
-    "main_module": "cloaken_connector.py",
+    "main_module": "cloaken_connector.pyc",
     "min_phantom_version": "4.2.7532",
     "app_wizard_version": "1.0.0",
     "configuration": {
         "server_url": {
-            "description": "Uri for Cloaken server",
+            "description": "Server URL",
             "data_type": "string",
             "required": true,
-            "value_list": [],
-            "default": "",
             "order": 0
         },
         "username": {
-            "description": "Username for Cloaken instance",
+            "description": "Username",
             "data_type": "string",
             "required": true,
-            "value_list": [],
-            "default": "",
             "order": 1
         },
         "password": {
-            "description": "Password for Cloaken Instance",
+            "description": "Password",
             "data_type": "password",
             "required": true,
             "order": 2
@@ -45,7 +41,6 @@
             "action": "test connectivity",
             "identifier": "test_connectivity",
             "description": "Validate the asset configuration for connectivity using supplied configuration",
-            "verbose": "",
             "type": "test",
             "read_only": true,
             "parameters": {},
@@ -56,7 +51,6 @@
             "action": "lookup url",
             "identifier": "lookup_url",
             "description": "Check for the presence of a url in a threat intelligence feed",
-            "verbose": "",
             "type": "investigate",
             "read_only": true,
             "parameters": {
@@ -68,8 +62,6 @@
                     "contains": [
                         "url"
                     ],
-                    "value_list": [],
-                    "default": "",
                     "order": 0
                 }
             },
@@ -80,20 +72,20 @@
                     "contains": [
                         "url"
                     ],
-                    "column_name": "url",
+                    "column_name": "URL",
                     "column_order": 0
                 },
                 {
                     "data_path": "action_result.status",
                     "data_type": "string",
-                    "column_name": "status",
+                    "column_name": "Status",
                     "column_order": 1
                 },
-     {
+                {
                     "data_path": "action_result.data.*.unshortened_url",
                     "data_type": "string",
                     "contains":["url"],
-                    "column_name": "Unshortened Url",
+                    "column_name": "Unshortened URL",
                     "column_order": 2
                 },
 
