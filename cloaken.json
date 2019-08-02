@@ -13,7 +13,7 @@
     "app_version": "1.0.0",
     "utctime_updated": "2019-05-26T23:01:31.064238Z",
     "package_name": "phantom_cloaken",
-    "main_module": "cloaken_connector.py",
+    "main_module": "cloaken_connector.pyc",
     "min_phantom_version": "4.2.7532",
     "app_wizard_version": "1.0.0",
     "configuration": {
@@ -21,16 +21,12 @@
             "description": "Server URL",
             "data_type": "string",
             "required": true,
-            "value_list": [],
-            "default": "",
             "order": 0
         },
         "username": {
             "description": "Username",
             "data_type": "string",
             "required": true,
-            "value_list": [],
-            "default": "",
             "order": 1
         },
         "password": {
@@ -66,8 +62,6 @@
                     "contains": [
                         "url"
                     ],
-                    "value_list": [],
-                    "default": "",
                     "order": 0
                 }
             },
@@ -78,20 +72,20 @@
                     "contains": [
                         "url"
                     ],
-                    "column_name": "url",
+                    "column_name": "URL",
                     "column_order": 0
                 },
                 {
                     "data_path": "action_result.status",
                     "data_type": "string",
-                    "column_name": "status",
+                    "column_name": "Status",
                     "column_order": 1
                 },
-     {
+                {
                     "data_path": "action_result.data.*.unshortened_url",
                     "data_type": "string",
                     "contains":["url"],
-                    "column_name": "Unshortened Url",
+                    "column_name": "Unshortened URL",
                     "column_order": 2
                 },
 
